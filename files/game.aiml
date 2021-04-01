@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+    
+    <category>
+        <pattern>xGAME</pattern>
+        <template>
+            <think><set name="topic">GAME</set></think>
+            Game Development!  What a fun choice!
+            <split/>
+            <delay>1</delay>
+            This field can also overlap with artificial intellegence
+            <split/>
+            <delay>1</delay>
+            Check out these sites for a little more information.
+            <split/>
+            <button>
+                <text>Information on AI in game developement</text>
+                <url>https://www.quytech.com/blog/artificial-intelligence-in-game-development/#:~:text=Use%20of%20AI%20in%20Games%20Development%3A%20AI%20is,being%20used%20to%20introduce%20the%20best%20in-game%20industry.</url>
+            </button>
+            <button>
+                <text>Information about the game development career</text>
+                <url>https://careerkarma.com/careers/game-development/</url>
+            </button>
+            <reply>
+                <text>Restart the career survey</text>
+                <postback>xSurvey</postback>
+            </reply>
+        </template>
+    </category>
+    
+    <topic name = "GAME">
+	    <category>
+            <pattern>HELP</pattern>
+            <template>
+                Available commands are:
+                <split/>
+                <ul>
+                    <li>RESTART</li>
+                </ul>
+            </template>
+        </category>
+	</topic>
+    
+    
+</aiml>

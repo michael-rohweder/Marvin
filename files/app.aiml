@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+    <category>
+        <pattern>xApp</pattern>
+        <template>
+            <think><set name = "topic">APP</set></think>
+            <delay>1</delay>
+            Mobile app development is a great field!
+            <split/>
+            <delay>1</delay>
+            Do you prefer to work on the user interface or the back end?
+            <reply>
+                <text>User Interface</text>
+                <postback>xAppUI</postback>
+            </reply>
+            <reply>
+                <text>Back End</text>
+                <postback>xAppBack</postback>
+            </reply>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>xAppUI</pattern>
+        <template>
+            <delay>1</delay>
+            Awesome!  Designing the UI can be very rewarding!
+            <split/>
+            <delay>1</delay>
+            Look at this site about what a mobile app UI developer does.
+            <button>
+                <text>Open Site</text>
+                <url>https://www.mightyrecruiter.com/job-descriptions/ui-developer/#:~:text=UI%20developers%20design%20the%20user%20interfaces%20for%20software,easy%20for%20those%20users%20to%20accomplish%20their%20goals.</url>
+            </button>
+            <split/>
+            <delay>2</delay>
+            Restart the survey here
+            <reply>
+                <text>Restart</text>
+                <postback>xSurvey</postback>
+            </reply>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>xAppBack</pattern>
+        <template>
+            <delay>1</delay>
+            Back end programming can be very challenging!
+            <split/>
+            <delay>1</delay>
+            Look at this site about the what a mobile developer does
+            <button>
+                <text>Open Site</text>
+                <url>https://www.glassdoor.com/Job-Descriptions/Mobile-Developer.htm</url>
+            </button>
+            <split/>
+            <delay>2</delay>
+            Restart the survey here
+            <reply>
+                <text>Restart</text>
+                <postback>xSurvey</postback>
+            </reply>
+        </template>
+    </category>
+
+    <topic name = "APP">
+        
+        <category>
+            <pattern>USER INTERFACE</pattern>
+            <template><srai>xAPPUI</srai></template>
+        </category>
+        <category>
+            <pattern>BACK END</pattern>
+            <template><srai>xAPPBACK</srai></template>
+        </category>
+        
+	    <category>
+            <pattern>HELP</pattern>
+            <template>
+                Available commands are:
+                <split/>
+                <ul>
+                    <li>USER INTERFACE</li>
+                    <li>BACK END</li>
+                    <li>RESTART</li>
+                </ul>
+            </template>
+        </category>
+	</topic>
+    
+
+</aiml>

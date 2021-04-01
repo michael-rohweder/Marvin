@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+<category>
+        <pattern>HI ^</pattern>
+        <template><srai>xGREETING</srai></template>
+    </category>
+    
+    <category>
+        <pattern>HELLO ^</pattern>
+        <template><srai>xGREETING</srai></template>
+    </category>
+    
+    <category>
+        <pattern>HEY ^</pattern>
+        <template><srai>xGREETING</srai></template>
+    </category>\
+    
+    <category>
+        <pattern>HOWDY ^</pattern>
+        <template><srai>xGREETING</srai></template>
+    </category>
+    
+    <category>
+        <pattern>xGREETING</pattern>
+        <template>
+            <random>
+                <li>Hello!  My name is Marvin!</li>
+                <li>Howdy!  They call me Marvin!</li>
+                <li>Hey, I'm Marvin!</li>
+            </random>
+            <split/>
+            <delay>2</delay>
+            I can help steer you in your career choice.
+            <split/>
+            <delay>1</delay>
+            <srai>xSurvey</srai>
+        </template>
+    </category>
+
+</aiml>

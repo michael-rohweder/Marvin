@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+<category>
+        <pattern>xNetworking</pattern>
+        <template>
+            <think><set name = "topic">NETWORKING</set></think>
+            <delay>1</delay>
+            Networking has a couple different paths you could follow.
+            <split/>
+            <delay>1</delay>
+            Do you prefer designing networks or maintaining the current system?
+            <reply>
+                <text>Design</text>
+                <postback>xDesign</postback>
+            </reply>
+            <reply>
+                <text>Maintain</text>
+                <postback>xMaintain</postback>
+            </reply>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>xMaintain</pattern>
+        <template>
+            <delay>1</delay>
+            Gotcha!
+            <split/>
+            <delay>1</delay>
+            Network Administrators are responsible for the maintanance of the current network systems.
+            <split/>
+            <delay>1</delay>
+            Check out this website for information on Network Administrators
+            <button>
+                <text>Open Site</text>
+                <url>https://www.computerscience.org/careers/network-administrator/</url>
+            </button>
+            <split/>
+            <delay>2</delay>
+            Restart the survey here to explore other options
+            <reply>
+                <text>Restart</text>
+                <postback>xSurvey</postback>
+            </reply>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>xDesign</pattern>
+        <template>
+            <delay>1</delay>
+            OK, great!
+            <split/>
+            <delay>1</delay>
+            Based on that, I think maybe you should consider looking at becoming a network architect.
+            <split/> 
+            <delay>1</delay>
+            Check out this website for more information
+            <button>
+                <text>Open Site</text>
+                <url>https://www.bls.gov/ooh/computer-and-information-technology/computer-network-architects.htm</url>
+            </button>
+            <split/>
+            <delay>2</delay>
+            You can explore other options here
+            <reply>
+                <text>Restart Survey</text>
+                <postback>xSurvey</postback>
+            </reply>
+            
+        </template>
+    </category>
+    
+    <topic name = "NETWORKING">
+        <category>
+            <pattern>DESIGN</pattern>
+            <template><srai>xDesign</srai></template>
+        </category>
+        <category>
+            <pattern>MAINTAIN</pattern>
+            <template><srai>xMaintain</srai></template>
+        </category>
+        
+	    <category>
+	        <category>
+                <pattern>DESIGN</pattern>
+                <template><srai>xDESIGN</srai></template>
+            </category>
+            <category>
+                <pattern>MAINTAIN</pattern>
+                <template><srai>xMAINTAIN</srai></template>
+            </category>
+            <pattern>HELP</pattern>
+            <template>
+                Available commands are:
+                <split/>
+                <ul>
+                    <li>DESIGN</li>
+                    <li>MAINTAIN</li>
+                    <li>RESTART</li>
+                </ul>
+            </template>
+        </category>
+	</topic>
+    
+</aiml>

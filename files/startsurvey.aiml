@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+    
+    <category>
+        <pattern>xSurvey</pattern>
+        <template>
+            <think><set name="topic">selectCategory</set></think>
+            Select the category that you are most interested in
+            <reply>
+                <text>Artificial Intellegence</text>
+                <postback>xAI</postback>
+            </reply>
+            <reply>
+                <text>Cyber Security</text>
+                <postback>xCS</postback>
+            </reply>
+            <reply>
+                <text>Networking</text>
+                <postback>xNetworking</postback>
+            </reply>
+            <reply>
+                <text>App Development</text>
+                <postback>xApp</postback>
+            </reply>
+            <reply>
+                <text>Game Development</text>
+                <postback>xGame</postback>
+            </reply>
+        </template>
+    </category>
+    
+    <topic name = "selectCategory">
+        
+        <category>
+            <pattern>HELP</pattern>
+            <template>
+                Available commands are:
+                <split/>
+                <ul>
+                    <li>ARTIFICIAL INTELLEGENCE</li>
+                    <li>CYBER SECURITY</li>
+                    <li>NETWORKING</li>
+                    <li>APP DEVELOPMENT</li>
+                    <li>GAME DEVELOPMENT</li>
+                </ul>
+            </template>
+        </category>
+        
+        <category>
+            <pattern>ARTIFICIAL INTELLEGENCE</pattern>
+            <template>
+                <srai>xAI</srai>
+            </template>
+        </category>
+        <category>
+            <pattern>CYBER SECURITY</pattern>
+            <template>
+                <srai>xCS</srai>
+            </template>
+        </category>
+        <category>
+            <pattern>NETWORKING</pattern>
+            <template>
+                <srai>xNETWORKING</srai>
+            </template>
+        </category>
+        <category>
+            <pattern>APP DEVELOPMENT</pattern>
+            <template>
+                <srai>xAPP</srai>
+            </template>
+        </category>
+        <category>
+            <pattern>GAME DEVELOPMENT</pattern>
+            <template>
+                <srai>xGAME</srai>
+            </template>
+        </category>
+    </topic>
+
+    
+</aiml>

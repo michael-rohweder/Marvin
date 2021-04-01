@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+
+    <category>
+        <pattern>*</pattern>
+        <template>
+            I did not understand that.  Please try again. 
+            <split/>
+            Type HELP for a list of available commands.
+            <reply>
+                <text>HELP</text>
+                <postback>HELP</postback>
+            </reply>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>RESTART</pattern>
+        <template><srai>xSurvey</srai></template>
+    </category>
+    
+</aiml>

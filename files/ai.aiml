@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+
+    <category>
+   	        <pattern>xAI</pattern>
+   	        <template>
+   	            <think><set name="topic">AI</set></think>
+    	        <delay>1</delay>
+          	    Artificial Intellegence!  Great topic!
+          	    <split/>
+		        <delay>1</delay>
+                Select a sub-category
+        	    <reply>
+        	        <text>Data Mining</text>
+       	        	<postback>xDataMining</postback>
+        	    </reply>
+		        <reply>
+        		    <text>Automation</text>
+               		<postback>xAutomation</postback>
+           	    </reply>
+            	<reply>
+                	<text>Machine Learning</text>
+                	<postback>xMachineLearning</postback>
+            	</reply>
+        	</template>
+    	</category>
+   	    <category>
+        	<pattern>xMachineLearning</pattern>
+        	<template>
+            		<delay>1</delay>
+            		Ok, Machine Learning it is!
+            		<split/>
+            		<delay>1</delay>
+            		This website is a great resource to give you some information on Machine Learning.
+            		<button>
+                		<text>Open Site</text>
+                		<url>https://www.geeksforgeeks.org/top-career-paths-in-machine-learning/</url>
+            		</button>
+            		<delay>2</delay>
+            		Click here to explore other career options!
+            		<reply>
+                		<text>Restart</text>
+                		<postback>xSurvey</postback>
+            		</reply>
+		    </template>
+    	</category>
+    
+    	<category>
+       		<pattern>xAutomation</pattern>
+        	<template>
+            		<delay>1</delay>
+            		Automation is an interesting choice!
+            		<split/>
+            		<delay>1</delay>
+            		Check out this website about how the automation career path!
+            		<button>
+                		<text>Open Site</text>
+                		<url>https://www.ucf.edu/online/engineering/news/automation-and-artificial-intelligence-careers/</url>
+            		</button>
+            		<split/>
+            		<delay>1</delay>
+                	Or, feel free to explore other options!
+            		<reply>
+                		<text>Restart</text>
+                		<postback>xSurvey</postback>
+            		</reply>
+        	</template>
+    	</category>
+    
+    	<category>
+        	<pattern>xDataMining</pattern>
+        	<template>
+            		<delay>2</delay>
+            		Excellent choice!
+            		<split/>
+            		<delay>1</delay>
+            		Check out this website about how companies use data mining.
+            		<button>
+                		<text>Open Site</text>
+                		<url>https://barnraisersllc.com/2016/11/07/companies-data-mining-business-better/</url>
+            		</button>
+            		<split/>
+            		<delay>2</delay>
+            		If that doesn't interest you, you may restart the survey
+            		<reply>
+                		<text>Restart</text>
+                		<postback><think><set name="topic">mainCategory</set></think>xSurvey</postback>
+            		</reply>
+        	</template>
+    	</category>
+    	
+    	<topic name = "AI">
+    	    <category>
+                <pattern>DATA MINING</pattern>
+                <template><srai>xDataMining</srai></template>
+            </category>
+              <category>
+                <pattern>AUTOMATION</pattern>
+                <template><srai>xAUTOMATION</srai></template>
+            </category>
+             <category>
+                <pattern>MACHINE LEARNING</pattern>
+                <template><srai>xMACHINELEARNING</srai></template>
+            </category>
+    	    <category>
+                <pattern>HELP</pattern>
+                <template>
+                    Available commands are:
+                    <split/>
+                    <ul>
+                        <li>DATA MINING</li>
+                        <li>AUTOMATION</li>
+                        <li>MACHINE LEARNING</li>
+                        <li>RESTART</li>
+                    </ul>
+                </template>
+            </category>
+    	</topic>
+
+
+</aiml>

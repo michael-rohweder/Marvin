@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+    <category>
+        <pattern>xCS</pattern>
+        <template>
+            <think><set name="topic">CS</set></think>
+            <delay>1</delay>
+            Cyber Security is a BOOMING career!
+            <delay>2</delay>
+            Check out this website about the projected demand for cybern security experts!
+            <button>
+                <text>Open Site</text>
+                <url>https://www.snhu.edu/about-us/newsroom/2020/07/cyber-security-roles</url>
+            </button>
+            <delay>2</delay>
+            Click here to restart the survey
+            <reply>
+                <text>Restart</text>
+                <postback>xSurvey</postback>
+            </reply>
+        </template>
+    </category>
+    
+    <topic name = "CS">
+	    <category>
+            <pattern>HELP</pattern>
+            <template>
+                Available commands are:
+                <split/>
+                <ul>
+                    <li>RESTART</li>
+                </ul>
+            </template>
+        </category>
+	</topic>
+
+    
+</aiml>
