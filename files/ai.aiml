@@ -91,19 +91,19 @@
     	
     	<topic name = "AI">
     	    <category>
-                <pattern>DATA MINING</pattern>
+                <pattern>^ DATA MINING ^</pattern>
                 <template><srai>xDataMining</srai></template>
             </category>
               <category>
-                <pattern>AUTOMATION</pattern>
+                <pattern>^ AUTOMATION ^</pattern>
                 <template><srai>xAUTOMATION</srai></template>
             </category>
              <category>
-                <pattern>MACHINE LEARNING</pattern>
+                <pattern>^ MACHINE LEARNING ^</pattern>
                 <template><srai>xMACHINELEARNING</srai></template>
             </category>
     	    <category>
-                <pattern>HELP</pattern>
+                <pattern>^ HELP ^</pattern>
                 <template>
                     Available commands are:
                     <split/>

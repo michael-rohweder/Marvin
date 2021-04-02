@@ -67,16 +67,16 @@
     <topic name = "APP">
         
         <category>
-            <pattern>USER INTERFACE</pattern>
+            <pattern>^ USER INTERFACE ^</pattern>
             <template><srai>xAPPUI</srai></template>
         </category>
         <category>
-            <pattern>BACK END</pattern>
+            <pattern>^ BACK END ^</pattern>
             <template><srai>xAPPBACK</srai></template>
         </category>
         
 	    <category>
-            <pattern>HELP</pattern>
+            <pattern>^ HELP ^</pattern>
             <template>
                 Available commands are:
                 <split/>

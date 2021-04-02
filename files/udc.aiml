@@ -7,6 +7,7 @@
             I did not understand that.  Please try again. 
             <split/>
             Type HELP for a list of available commands.
+            
             <reply>
                 <text>HELP</text>
                 <postback>HELP</postback>
@@ -15,7 +16,7 @@
     </category>
     
     <category>
-        <pattern>RESTART</pattern>
+        <pattern>^ RESTART ^</pattern>
         <template><srai>xSurvey</srai></template>
     </category>
     

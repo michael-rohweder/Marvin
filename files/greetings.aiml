@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
 <category>
-        <pattern>HI ^</pattern>
+        <pattern>^ HI ^</pattern>
         <template><srai>xGREETING</srai></template>
     </category>
     
     <category>
-        <pattern>HELLO ^</pattern>
+        <pattern>^ HELLO ^</pattern>
         <template><srai>xGREETING</srai></template>
     </category>
     
     <category>
-        <pattern>HEY ^</pattern>
+        <pattern>^ HEY ^</pattern>
         <template><srai>xGREETING</srai></template>
     </category>\
     
     <category>
-        <pattern>HOWDY ^</pattern>
+        <pattern>^ HOWDY ^</pattern>
         <template><srai>xGREETING</srai></template>
     </category>
     

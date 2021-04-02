@@ -32,7 +32,7 @@
     <topic name = "selectCategory">
         
         <category>
-            <pattern>HELP</pattern>
+            <pattern>^ HELP ^</pattern>
             <template>
                 Available commands are:
                 <split/>
@@ -47,31 +47,31 @@
         </category>
         
         <category>
-            <pattern>ARTIFICIAL INTELLEGENCE</pattern>
+            <pattern>^ ARTIFICIAL INTELLEGENCE ^</pattern>
             <template>
                 <srai>xAI</srai>
             </template>
         </category>
         <category>
-            <pattern>CYBER SECURITY</pattern>
+            <pattern>^ CYBER SECURITY ^</pattern>
             <template>
                 <srai>xCS</srai>
             </template>
         </category>
         <category>
-            <pattern>NETWORKING</pattern>
+            <pattern>^ NETWORKING ^</pattern>
             <template>
                 <srai>xNETWORKING</srai>
             </template>
         </category>
         <category>
-            <pattern>APP DEVELOPMENT</pattern>
+            <pattern>^ APP DEVELOPMENT ^</pattern>
             <template>
                 <srai>xAPP</srai>
             </template>
         </category>
         <category>
-            <pattern>GAME DEVELOPMENT</pattern>
+            <pattern>^ GAME DEVELOPMENT ^</pattern>
             <template>
                 <srai>xGAME</srai>
             </template>

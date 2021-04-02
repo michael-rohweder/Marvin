@@ -72,25 +72,19 @@
     </category>
     
     <topic name = "NETWORKING">
-        <category>
-            <pattern>DESIGN</pattern>
-            <template><srai>xDesign</srai></template>
-        </category>
-        <category>
-            <pattern>MAINTAIN</pattern>
-            <template><srai>xMaintain</srai></template>
-        </category>
         
 	    <category>
-	        <category>
-                <pattern>DESIGN</pattern>
-                <template><srai>xDESIGN</srai></template>
-            </category>
-            <category>
-                <pattern>MAINTAIN</pattern>
-                <template><srai>xMAINTAIN</srai></template>
-            </category>
-            <pattern>HELP</pattern>
+            <pattern>^ DESIGN ^</pattern>
+            <template><srai>xDESIGN</srai></template>
+        </category>
+        
+        <category>
+            <pattern>^ MAINTAIN ^</pattern>
+            <template><srai>xMAINTAIN</srai></template>
+        </category>
+            
+        <category>    
+            <pattern>^ HELP ^</pattern>
             <template>
                 Available commands are:
                 <split/>

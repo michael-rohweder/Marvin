@@ -23,7 +23,7 @@
     
     <topic name = "CS">
 	    <category>
-            <pattern>HELP</pattern>
+            <pattern>^ HELP ^</pattern>
             <template>
                 Available commands are:
                 <split/>

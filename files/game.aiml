@@ -30,7 +30,7 @@
     
     <topic name = "GAME">
 	    <category>
-            <pattern>HELP</pattern>
+            <pattern>^ HELP ^</pattern>
             <template>
                 Available commands are:
                 <split/>
